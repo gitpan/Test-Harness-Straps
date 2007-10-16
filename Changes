@@ -1,0 +1,6 @@
+0.27  Tue Oct 16 16:02:03 EDT 2007
+    A separate distribution of Straps.pm forked off of Test::Harness 2.65_02.
+    It is provided for backwards compatibility only.  For customized TAP
+    parsing please use TAP::Parser.
+    
+    Past changes to Straps can be found in the Test::Harness distribution.
