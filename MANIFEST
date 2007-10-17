@@ -6,8 +6,10 @@ lib/Test/Harness/Point.pm
 lib/Test/Harness/Results.pm
 lib/Test/Harness/Straps.pm
 MANIFEST
+META.yml
 t/00compile.t
 t/callback.t
+t/lib/if.pm
 t/point-parse.t
 t/point.t
 t/sample-tests/bailout
@@ -44,4 +46,3 @@ t/sample-tests/vms_nit
 t/sample-tests/with_comments
 t/strap-analyze.t
 t/strap.t
-META.yml

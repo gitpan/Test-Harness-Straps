@@ -1,3 +1,6 @@
+0.29  Wed Oct 17 18:42:23 EDT 2007
+    Forgot to update the MANIFEST to contain the testing copy of if.pm
+
 0.28  Wed Oct 17 02:30:16 EDT 2007
     Downgraded to the version from Test::Harness 2.64.  The alpha has bugs.
 
