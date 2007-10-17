@@ -1,6 +1,6 @@
 ---
 name: Test-Harness-Straps
-version: 0.27
+version: 0.28
 author:
   - 'Michael G Schwern <schwern@pobox.com>'
 abstract: detailed analysis of test results
@@ -28,7 +28,7 @@ provides:
     version: 0.01
   Test::Harness::Straps:
     file: lib/Test/Harness/Straps.pm
-    version: 0.27
+    version: 0.28
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

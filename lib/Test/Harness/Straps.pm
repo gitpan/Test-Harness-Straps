@@ -3,7 +3,7 @@ package Test::Harness::Straps;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.27';
+$VERSION = '0.28';
 
 use Config;
 use Test::Harness::Assert;
@@ -300,7 +300,7 @@ sub analyze_file {
 
     $results->set_wait($?);
     if ( $? && $self->{_is_vms} ) {
-        $results->set_exit($?);
+        eval q{use vmsish "status"; $results->set_exit($?); };
     }
     else {
         $results->set_exit( _wait2exit($?) );
@@ -359,9 +359,7 @@ sub _command {
     my $self = shift;
 
     return $ENV{HARNESS_PERL}   if defined $ENV{HARNESS_PERL};
-
-    # Quote our interpreter if it has spaces in the filename and isn't quoted.
-    return qq["$^X"]            if (($^X =~ /\s/) && ($^X !~ /^["']/));
+    return qq["$^X"]            if $self->{_is_win32} && ($^X =~ /[^\w\.\/\\]/);
     return $^X;
 }
 
@@ -484,7 +482,6 @@ sub _filtered_INC {
             local $ENV{PERL5LIB};
             my @inc =`$perl -le "print join qq[\\n], \@INC"`;
             chomp @inc;
-            return @inc;
         }];
         return @{$cache{$perl}};
     }

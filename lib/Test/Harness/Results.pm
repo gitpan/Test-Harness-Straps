@@ -30,19 +30,8 @@ sub new {
     my $class = shift;
     my $self  = bless {}, $class;
 
-    $self->_init;
-
     return $self;
 }
-
-sub _init {
-    my $self = shift;
-    
-    %$self = (
-        seen    => 0,
-    );
-}
-
 
 =head1 ACCESSORS
 
@@ -129,18 +118,7 @@ sub ok {
     return $self->{ok} || 0;
 }
 
-sub set_exit {
-    my $self = shift;
-    if ($^O eq 'VMS') {
-        eval {
-            use vmsish q(status);
-            $self->{exit} = shift;  # must be in same scope as pragma
-        }
-    }
-    else {
-        $self->{exit} = shift;
-    }
-}
+sub set_exit { my $self = shift; $self->{exit} = shift }
 sub exit {
     my $self = shift;
     return $self->{exit} || 0;

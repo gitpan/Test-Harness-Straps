@@ -14,7 +14,7 @@ use Test::More tests => 5;
 
 BEGIN { use_ok 'Test::Harness::Straps' }
 
-diag( "Testing Test::Harness::Straps $Test::Harness::Straps::VERSION",
+diag( "Testing Test::Harness::Straps $Test::Harness::Straps::VERSION ",
       "under Perl $] and Test::More $Test::More::VERSION" )
       unless $ENV{PERL_CORE};
 

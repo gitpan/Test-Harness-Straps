@@ -1,3 +1,6 @@
+0.28  Wed Oct 17 02:30:16 EDT 2007
+    Downgraded to the version from Test::Harness 2.64.  The alpha has bugs.
+
 0.27  Tue Oct 16 16:02:03 EDT 2007
     A separate distribution of Straps.pm forked off of Test::Harness 2.65_02.
     It is provided for backwards compatibility only.  For customized TAP
