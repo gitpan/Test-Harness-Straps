@@ -3,7 +3,7 @@ package Test::Harness::Straps;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.29';
+$VERSION = '0.30';
 
 use Config;
 use Test::Harness::Assert;

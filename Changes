@@ -1,3 +1,7 @@
+0.30  Tue Jan  8 14:33:02 PST 2008
+    Forgot to make it install into the core directory and overlay the
+    existing module [spotted by imcat]
+
 0.29  Wed Oct 17 18:42:23 EDT 2007
     Forgot to update the MANIFEST to contain the testing copy of if.pm
 

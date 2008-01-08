@@ -19,5 +19,7 @@ my $build = Module::Build->new(
         'File::Spec'    => 0.6,
     },
     dist_author     => 'Michael G Schwern <schwern@pobox.com>',
+    
+    installdirs     => 'core',
 );
 $build->create_build_script;
